@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: gateway
-          image: 'rafaelaafferri/gateway-service:latest'
+          image: rafaelaafferri/gateway-service:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
