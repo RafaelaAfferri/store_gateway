@@ -43,12 +43,26 @@ logging:
   level:
     store: ${LOGGING_LEVEL_STORE:debug}
 
+# management:
+#   endpoint:
+#     gateway:
+#     enabled: true
+#   endpoints:
+#     web:
+#     base-path: /gateway/actuator
+#     exposure:
+#       include: [ 'prometheus', 'gateway' ]
 management:
   endpoint:
+    prometheus:
+      enabled: true
     gateway:
-    enabled: true
+      enabled: true
   endpoints:
     web:
-    base-path: /gateway/actuator
-    exposure:
-      include: [ 'prometheus', 'gateway' ]
+      base-path: /gateway/actuator
+      exposure:
+        include: [ 'prometheus', 'gateway' ]
+  metrics:
+    enable:
+      all: true
